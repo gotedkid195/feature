@@ -1,0 +1,9 @@
+Feature: Dashboard 
+   
+Scenario:User muốn setting dashboard
+  Given: User login 
+  AND:   User phải có quyền setting dashboard  
+  When:  User click vào phần setting dashboad
+  Then results
+
+Scenario:User muốn vào dashboard giám sát
