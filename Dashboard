@@ -1,9 +1,19 @@
 Feature: Dashboard 
    
-Scenario:User muốn setting dashboard
-  Given: User login 
-  AND:   User phải có quyền setting dashboard  
-  When:  User click vào phần setting dashboad
-  Then results
+Scenario: User muốn setting dashboard
+	Given: 	User login vào đường dân admin
+	And:   	User phải có quyền vào page setting dashboard  
+	When:  	User click vào phần setting dashboad
+	Then:	User thấy bảng talbe trong đó có list danh sách các tiêu chuẩn cần setting
+	User:  	User click vào tiêu chuân mình cần setting
+	And: 	User cấu hình địa chỉ cho các chỉ tiêu
+	And: 	User đặt tên, đặt đơn vị cho các chỉ tiêu
+	And: 	User cấu hình màu cho các chỉ tiêu
+	And: 	User cấu hình màu cho bảng tổng hợp max - min
+	And: 	User cấu hình biểu đồ, đồ thị cho các chỉ tiêu
+	When:  	User setting xong, user bấm save để lưu tất cả thay đổi 
 
-Scenario:User muốn vào dashboard giám sát
+Scenario: User muốn vào dashboard để xem và giám sát các tiêu chuẩn
+	Given: 	User login 
+	And:   	User phải có quyền vào page dashboard  
+	Then:	User thấy các bảng khung talbe hiện thị các giá trị đo, đã được cấu hình trong setting dashboard 
