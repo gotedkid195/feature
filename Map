@@ -1,0 +1,45 @@
+Feature: Google map
+
+
+Scenario: User muốn setting google map
+    Given: 	User login vào đường dân admin
+    And:   	User phải có quyền vào page setting google map
+    Then:  	User thấy list danh sách các địa điêm mình đã nhập
+    And:    User thấy button edit, delete, add local
+    User click vào phần setting google map
+    Then:	  User thấy khung nhập địa điểm cần tìm
+
+Scenario: User muốn add địa điệm hiện thị trên google map
+    Given: 	User login vào đường dân admin
+    And:   	User phải có quyền vào page setting google map
+    Then:  	User thấy list danh sách các địa điêm mình đã nhập
+    When:  	User click vào button add local
+    Then:	  User thấy khung nhập địa điểm cần tìm
+    And: 	  User thấy bản đồ bên dưới
+    When: 	User nhập địa điêm cần tim xong
+    And: 	  User click search
+    Then: 	Bản đồ bên dưới sẽ cập nhật tới đia điêm user tim
+    When: 	User tìm đúng địa điệm mình mong muốn
+    Thẹn:   User nhận save để lưu địa điểm này
+
+Scenario: User muốn edit địa điệm hiện thị trên google map
+    Given: 	User login vào đường dân admin
+    And:   	User phải có quyền vào page setting google map
+    Then:  	User thấy list danh sách các địa điêm mình đã nhập
+    When:  	User click vào button edit
+    Then:	  User thấy khung nhập địa điểm cần tìm
+    And: 	  User thấy bản đồ bên dưới
+    When: 	User nhập địa điêm mình muốn
+    And: 	  User click search
+    Then: 	Bản đồ bên dưới sẽ cập nhật tới đia điêm user tim
+    When: 	User tìm đúng địa điệm mình mong muốn
+    Thẹn:   User nhận save để lưu địa điểm này
+
+Scenario: User muốn edit địa điệm hiện thị trên google map
+    Then:	  User thấy khung nhập địa điểm cần tìm
+    And: 	  User thấy bản đồ bên dưới
+    When: 	User nhập địa điêm cần tim xong
+    And: 	  User click search
+    Then: 	Bản đồ bên dưới sẽ cập nhật tới đia điêm user tim
+    When: 	User tìm đúng địa điệm mình mong muốn
+    Thẹn:   User nhận save để lưu địa điểm này
