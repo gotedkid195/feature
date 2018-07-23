@@ -1,0 +1,23 @@
+Feature: Event
+
+
+Scenario: User muốn cấu hình alarm 
+	Given: 	User login 
+	And:   	User phải có quyền vào page event  
+	Then:	  User thấy form cấu hình alarm
+  And:    User nhập thông tin như 
+
+Scenario: User muốn vào phần Report loging data
+	Given: 	User login 
+	And:   	User phải có quyền vào page report
+  Then:   User thấy các bảng talbe hiển thị 100 giá trị đo được cập nhật mới nhất
+  And:    User thấy option để chọn tần xuất loging (1m,2m,5m,10m,1h..)
+  When:   User click option chọn tần xuất
+  Then:   Các giá trị trong bảng table sẽ update follow tần xuất loging đã được chọn
+  
+Scenario: User muốn vào phần Report để dữ liệu ra file excel
+	Given: 	User login 
+	And:   	User phải có quyền vào page report
+  When:   User chọn tần xuất log data hoặc để default
+  And:    User click vào dòng chử "Bạn muốn xuất dữ liệu ra file excel
+	Then:	  Website tự động tải file excle về máy người dùng
