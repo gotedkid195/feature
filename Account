@@ -1,0 +1,27 @@
+Feature: Account
+
+
+Scenario: User muốn setting tài khoản
+    Given: 	User login vào đường dân admin
+    And:   	User phải có quyền vào page setting account
+    Then:  	User thấy list danh sách người dùng
+    And:    User thấy button edit user, delete user
+
+Scenario: User muốn edit user
+    Given: 	User login vào đường dân admin
+    And:   	User phải có quyền vào page setting account
+    Then:  	User thấy list danh sách người dùng
+    When:  	User click vào button edit tại user mà mình muốn sữa
+    Then:	User thấy bảng table hiển thị các thông tin của user đó 
+    And: 	Các thông tin như tên user ,email , password cũ ,password mới ,phân quyền
+    When: 	User sữa lại thông tin theo ý mình mong muốn
+    Thẹn:   User nhận save để lưu
+
+Scenario: User muốn delete user
+    Given: 	User login vào đường dân admin
+    And:   	User phải có quyền vào page setting account
+    Then:  	User thấy list danh sách người dùng
+    When:  	User click vào button delete mà mình muốn xóa
+    Then:	  Trình duyệt sẽ hỏi lại "Bạn có muốn sẽ xóa tài khoản này không"
+    And: 	  User click OK để xác nhận khống
+    And:    User click NO đẽ hũy xóa account
