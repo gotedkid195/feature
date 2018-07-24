@@ -1,0 +1,24 @@
+Given: Cấp quyền cài đặt tính năng chuyên gia cho tài khoản.
+Add: Kiểm tra user có trong danh sách tài khoản đã đăng kí và tài khoản có quyền truy cập, sửa đổi “chuyên gia”.
+When:
+- Scenario Drashboard
+	Given: mở tính năng hệ chuyên gia tư vấn.
+	When: chọn vào vùng tư vấn.
+	Then: hiện lên các thông số cốt lõi chứng minh tính ổn định của hệ thống, id thiết bị.
+	Add: chuyên gia có quyền thêm bớt các thông số.
+	Add: User quan sát hệ thống, phát hiện lỗi.
+	Add: có khả năng cảnh báo tự động, thông báo lỗi theo các thông số được cài đặt trước
+- Scenario Alarm
+	Add: bấm vào nút cảnh báo, hệ thống sẽ tự động gửi email, tin nhắn cho các chuyên gia khác. Đồng thời bật tính năng chat nhóm.
+	Add: có nút bật thêm camera để trò chuyện hình ảnh.
+- Scenario comment
+	Add: có popup khi được tuỳ chọn vào nút "danh sách vật tư" hiện tất cả các thiết bị, linh kiện đang được lắp đặt, kèm theo mã mua hàng.
+When: thảo luận và ghi chú lỗi vào bảng ghi chú.  Chi tiết lỗi kèm theo chuẩn đoán, và cách khắc phục. Của từng thiết bị, linh kiện rõ ràng.
+	Add: tick chọn vào các mục cần "thay thế" "sửa" "vệ sinh".
+Then: tuỳ chọn chu kỳ lỗi của hệ thống hoặc chu kỳ cần thao tác vệ sinh,....
+	Add: thống nhất lỗi các chuyên gia sẽ bấm vào nút thống nhất.
+Then:
+- Gửi mail về cho người vận hành, GD kỹ thuật theo nội dung đã được ghi chú và form đã được lưu vào trước đó.
+Add: lỗi hoặc cảnh báo có chu kỳ thì hệ thống web sẽ kiểm tra đúng chu kỳ sẽ gửi lại cảnh báo cho chuyên gia, những người nằm trong danh sách báo lỗi.
+Add: là linh kiện cần được thay thế sẽ gửi thêm mail về phòng  mua hàng.
+Add: có nút "hoàn thành" cho giai đoạn fix lỗi. Để các chuyên gia vào kiểm tra hệ thống sau khi hoàn thành quá trình sửa lỗi.
