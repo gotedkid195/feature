@@ -1,0 +1,16 @@
+Feature: Control
+
+
+Scenario: User muốn setting control
+    Given: 	User login vào đường dân admin
+    And:   	User phải có quyền vào page setting control
+    Then:  	User thấy list danh sách các phím để điều khiển, trên danh sách đó thể hiện các danh mục tùy chọn như type button, name, timer, cho phép hiển thị
+    And:    User có thể thay đổi các danh mục tùy chọn đó theo ý mình muốn
+    Then:   User nhấn save để lưu 
+
+Scenario: User muốn điều khiển
+    Given: 	User login
+    And:   	User phải có quyền vào page control
+    Then:  	User thấy bảng table trong đó có các button đã được setup bên phần setting
+    When:  	User click vào button
+    Then:   Ứng nới mỗi button được click sẽ được giá trị vào csdl
