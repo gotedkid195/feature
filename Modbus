@@ -1,0 +1,10 @@
+
+Feature: Google map
+
+
+Scenario: User kĩ thuật login
+    Given: 	Hệ thống có user kĩ thuật A và pass B
+    When:   	User phải có quyền vào page setting google map
+    Then:  	User thấy list danh sách các địa điêm mình đã nhập
+    And:    User thấy button edit, delete, add local
+    Then:   User có thể chỉnh sữa theo ý mình muốn
