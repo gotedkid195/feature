@@ -24,19 +24,56 @@ Scenario: User bình thường login
 
     Given: 	User kĩ thuật đã login
     When:   User đi tới trang cấu hình modbus
-    Then:    User thấy danh sách chip
+    Then:   User thấy danh sách chip
     And:    User thấy nút thêm chip
     And:    User bấm nút thêm chip
-    Then:    User thấy form thêm chip 
+    Then:   User thấy form thêm chip 
     And:    User nhập ID vào form
     
     Given: 	User kĩ thuật đã login
     When:   User đi tới trang cấu hình modbus
-    Then:    User thấy danh sách chip
+    Then:   User thấy danh sách chip
     And:    User thấy nút thêm chip
     And:    User bấm nút thêm chip
-    Then:    User thấy form thêm chip
+    Then:   User thấy form thêm chip
     And:    User nhập ID vào form
     And:    User nhập ID "1234"
     And:    User bấm save
     Then:   User thấy danh sách chip có ID "1234"
+    
+    Given: 	User kĩ thuật đã login
+    When:   User đi tới trang cấu hình modbus
+    Then:   User thấy danh sách chip
+    And:    User thấy nút thêm chip
+    And:    User bấm nút thêm chip
+    Then:   User thấy form thêm chip
+    And:    User nhập ID vào form
+    And:    User nhập ID "1234"
+    And:    User bấm save
+    Then:   User thấy danh sách chip có ID "1234"
+    When:   User click vào ID mình muốn cấu hình
+    Then:   User thấy form table
+    And:    Trong form table có cấu hình tên 
+    And:    Trong form table có cấu hình địa chỉ bắt đầu
+    And:    Trong form table có cấu hình kiểu dữ liệu
+    And:    Trong form table có cấu hình độ dài
+   
+    Given: 	User kĩ thuật đã login
+    When:   User đi tới trang cấu hình modbus
+    Then:   User thấy danh sách chip
+    And:    User thấy nút thêm chip
+    And:    User bấm nút thêm chip
+    Then:   User thấy form thêm chip
+    And:    User nhập ID vào form
+    And:    User nhập ID "1234"
+    And:    User bấm save
+    Then:   User thấy danh sách chip có ID "1234"
+    When:   User click vào ID mình muốn cấu hình
+    Then:   User thấy form table
+    And:    Trong form table có cấu hình tên 
+    And:    Trong form table có cấu hình địa chỉ bắt đầu
+    And:    Trong form table có cấu hình kiểu dữ liệu
+    And:    Trong form table có cấu hình độ dài
+    And:    User nhập thông tin vào form table
+    And:    User bấm save
+    And:    User quay lại page list danh sách chip
