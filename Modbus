@@ -1,10 +1,42 @@
-
-Feature: Google map
+Feature: Modbus
 
 
 Scenario: User kĩ thuật login
     Given: 	Hệ thống có user kĩ thuật A và pass B
-    When:   	User phải có quyền vào page setting google map
-    Then:  	User thấy list danh sách các địa điêm mình đã nhập
-    And:    User thấy button edit, delete, add local
-    Then:   User có thể chỉnh sữa theo ý mình muốn
+    When:   User đi tới trang quản lý
+    And:    User nhập username A pass B
+    And:    User bấm nút logn
+    Then:   User login thành công
+    And:    User thấy chổ cấu hình modbus
+ 
+Scenario: User bình thường login 
+    Given: 	Hệ thống có user bình thường A và pass B
+    When:   User đi tới trang quản lý
+    And:    User nhập username A pass B
+    And:    User bấm nút logn
+    Then:   User login không thành công
+    And:    User vẫn đứng ở trang login
+    
+    Given: 	User kĩ thuật đã login
+    When:   User đi tới trang cấu hình modbus
+    Then:    User thấy danh sách chip
+    And:    User thấy nút thêm chip
+
+    Given: 	User kĩ thuật đã login
+    When:   User đi tới trang cấu hình modbus
+    Then:    User thấy danh sách chip
+    And:    User thấy nút thêm chip
+    And:    User bấm nút thêm chip
+    Then:    User thấy form thêm chip 
+    And:    User nhập ID vào form
+    
+    Given: 	User kĩ thuật đã login
+    When:   User đi tới trang cấu hình modbus
+    Then:    User thấy danh sách chip
+    And:    User thấy nút thêm chip
+    And:    User bấm nút thêm chip
+    Then:    User thấy form thêm chip
+    And:    User nhập ID vào form
+    And:    User nhập ID "1234"
+    And:    User bấm save
+    Then:   User thấy danh sách chip có ID "1234"
